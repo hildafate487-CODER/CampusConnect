@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect | Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <h1>CampusConnect</h1>
+        <p>Your academic life, organized.</p>
+    </header>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <h2>CampusConnect</h2>
+
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#assignments">Assignments</a>
+                <a href="#timetable">Study Timetable</a>
+                <a href="#announcements">Announcements</a>
+                <a href="#progress">My Progress</a>
+            </nav>
+
+            <p class="sidebar-footer">Learn. Organize. Succeed.</p>
+        </aside>
+
+        <main class="main-content">
+
+            <section class="welcome" id="dashboard">
+                <div>
+                    <h2>Welcome to CampusConnect!</h2>
+                    <p>Manage your academic activities in one place.</p>
+                </div>
+                <button id="logoutBtn">Log Out</button>
+            </section>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Assignments</h3>
+                    <p id="totalAssignments">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <p id="completedAssignments">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pending</h3>
+                    <p id="pendingAssignments">0</p>
+                </div>
+            </section>
+
+            <section class="content-card" id="assignments">
+                <h2>Assignment Manager</h2>
+
+                <form id="assignmentForm">
+                    <input
+                        type="text"
+                        id="assignmentTitle"
+                        placeholder="Enter assignment title"
+                        required
+                    >
+
+                    <input
+                        type="date"
+                        id="assignmentDate"
+                        required
+                    >
+
+                    <button type="submit">Add Assignment</button>
+                </form>
+
+                <div id="assignmentList">
+                    <p>No assignments added yet.</p>
+                </div>
+            </section>
+
+            <section class="content-card" id="timetable">
+                <h2>My Study Timetable</h2>
+
+                <form id="studyForm">
+                    <input
+                        type="text"
+                        id="studySubject"
+                        placeholder="Enter subject"
+                        required
+                    >
+
+                    <input
+                        type="time"
+                        id="studyTime"
+                        required
+                    >
+
+                    <button type="submit">Add Study Session</button>
+                </form>
+
+                <div id="studyList">
+                    <p>No study sessions added yet.</p>
+                </div>
+            </section>
+
+            <section class="content-card" id="announcements">
+                <h2>Academic Announcements</h2>
+                <div id="announcementList">
+                    <p>Welcome to your student information center.</p>
+                </div>
+            </section>
+
+            <section class="content-card" id="progress">
+                <h2>My Academic Progress</h2>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="progressText">0% completed</p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CampusConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
